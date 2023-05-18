@@ -6,7 +6,7 @@ excluded:
     - .bundle
     - .github
     - .etc
-    - ProjectUtils
+    - .ProjectUtils
     - Pods
     - vendor
 
