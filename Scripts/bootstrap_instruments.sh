@@ -2,5 +2,7 @@
 
 set -euo pipefail
 
+export BASE_PATH=$1
+
 echo "🦄 Install instruments... 🦄"
-./.setup_instruments.sh ./.instruments.txt
+./$BASE_PATH/.setup_instruments.sh ./$BASE_PATH/.instruments.txt

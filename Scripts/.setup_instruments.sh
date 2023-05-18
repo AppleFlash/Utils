@@ -22,7 +22,7 @@ for instrument in $required_instruments; do
 	version=$(echo $instrument | cut -w -f2)
 	execulable=$(echo $instrument | cut -w -f3)
 
-	./.install_instruments.sh $repository $version $execulable
+	./$BASE_PATH/.install_instruments.sh $repository $version $execulable
 done
 
 IFS=$ORIGINAL_IFS
