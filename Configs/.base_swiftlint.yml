@@ -1,0 +1,43 @@
+excluded:
+    - .build
+    - .git
+    - .swiftpm
+    - .fastlane
+    - .bundle
+    - .github
+    - .etc
+    - ProjectUtils
+    - Pods
+    - vendor
+
+disabled_rules:
+    - nesting
+    - identifier_name
+
+type_name:
+    min_length:
+        warning: 2
+
+cyclomatic_complexity:
+    ignores_case_statements: true
+
+function_parameter_count:
+    warning: 7
+
+line_length: 120
+
+function_body_length:
+    warning: 200
+    error: 1000
+
+file_length:
+    warning: 500
+    error: 10000
+
+custom_rules:
+    tutu_private_method:
+        included: ".*.swift"
+        name: "Private methods naming convention"
+        regex: "private (static)?(\\s)?(func|var|let|lazy var) [^_]\\w+"
+        message: "Private method should start with _"
+        severity: warning
